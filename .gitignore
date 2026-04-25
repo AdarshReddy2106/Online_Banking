@@ -1,2 +1,50 @@
+# dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# production & build
+build/
+dist/
+dist-ssr/
+*.local
+
+# test reports
+coverage/
+.nyc_output/
+
+# environment variables & secrets
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.crt
+*.p8
+*.pub
+
+# database files
+*.db
+*.sqlite
+*.sqlite3
+*.db3
+*.db-journal
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+
 
