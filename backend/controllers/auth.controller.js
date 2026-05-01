@@ -4,9 +4,14 @@ const bcrypt = require('bcrypt');
 const jwt    = require('jsonwebtoken');
 require('dotenv').config();
 
-const JWT_SECRET     = process.env.JWT_SECRET     || 'online_banking_super_secret_key_2024';
+const JWT_SECRET     = process.env.JWT_SECRET;
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '24h';
 const SALT_ROUNDS    = 10;
+
+if (!JWT_SECRET) {
+  console.error("FATAL ERROR: JWT_SECRET is not defined.");
+  process.exit(1);
+}
 
 // ── Helper: build JWT ───────────────────────────────────────────
 const signToken = (user, roleName) =>
