@@ -13,6 +13,8 @@ dist-ssr/
 coverage/
 .nyc_output/
 
+#rest file
+test.http
 # environment variables & secrets
 .env
 .env.*
